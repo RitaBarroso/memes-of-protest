@@ -1,0 +1,1548 @@
+
+body {
+	font-family: "Napo";
+	overflow-x: hidden;
+  background-color: white;
+	cursor: url('imgs/cursor.png'), pointer ;
+}
+
+.hidden {
+	display: none;
+}
+
+.section {
+	width: 100vw;
+	height: 100vh;
+}
+
+.draggable{
+	cursor: -webkit-grab; cursor: grab;
+}
+
+.source {
+	width: 60vw;
+	height: 3vh;
+}
+
+.source p {
+	color: black;
+	font-size:0.8vw;
+	opacity: 0.1; 
+}
+
+.source p:hover {
+	color: black;
+	font-size:0.8vw;
+	opacity: 1; 
+}
+
+
+/************************** SECÇÃO 1 *************************/
+
+
+#memesTitle {
+	width: 49vw;
+	height: 30vh;
+	position: relative; 
+	top: 35vh;
+	left: 25.5vw;
+	z-index:1;
+}	
+
+#memesTitle h1{
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 7.1vw;
+	margin-top: 0;
+	margin-left: 2vw;
+	color: #0000ff;
+	animation: titleanimation 4s infinite;	
+}
+
+@keyframes titleanimation {
+	0%{		
+	}
+	30% {text-shadow: -2px 3px #eee424, -4px 6px #eee424, -8px 9px #eee424, -12px 12px #eee424 ;
+	}
+	70% {text-shadow: -2px 3px #eee424, -4px 6px #eee424, -8px 9px #eee424, -12px 12px #eee424 ;
+	}	
+	100% {		
+	}
+}
+
+#memesTitle h1:hover{
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 7.1vw;
+	margin-top: 0;
+	margin-left: 2vw;
+	color: #0000ff;
+	text-shadow: -2px 3px #eee424, -4px 6px #eee424, -8px 9px #eee424, -12px 12px #eee424 ;
+}
+
+#beyondTitle {
+	background-color: white;
+	border: solid 0.2vw black;
+	width: 12.5vw;
+	height: 47vh;
+	position: relative;
+	top: 10vh;
+	left: 57.5vw;
+	animation: boxanimation 5s 1s infinite;
+}
+
+@keyframes boxanimation {
+	0% {		
+	}
+	5% {
+		box-shadow: -4px 4px #0000ff, -6px 6px black;
+	}
+	10% {
+		box-shadow: -4px 4px #0000ff, -6px 6px black, -10px 10px #0000ff, -12px 12px black ;
+	}
+	15% {
+		box-shadow: -4px 4px #0000ff, -6px 6px black, -10px 10px #0000ff, -12px 12px black, -18px 18px #0000ff, -20px 20px black;
+	}
+	85%{
+	 box-shadow: -4px 4px #0000ff, -6px 6px black, -10px 10px #0000ff, -12px 12px black, -18px 18px #0000ff, -20px 20px black;
+	}
+	90%{
+			box-shadow: -4px 4px #0000ff, -6px 6px black, -10px 10px #0000ff, -12px 12px black;
+	}
+	95%{
+		box-shadow: -4px 4px #0000ff, -6px 6px black;
+	}
+	100% {		
+	}
+}
+
+
+#beyondTitle h1 {
+	font-weight: 900;
+	font-size: 2.8vw;
+	line-height: 1.3em;
+	float: right;
+	padding-right: 1vw;
+	padding-top: 9.6vh;
+}
+
+
+.brace img {
+	width: 15vw;
+	background-color: yellow;
+	border: solid 0.2vw #0000ff;
+}
+
+a p {
+	text-decoration: none;
+	margin: 0 auto;
+	color: #0000ff;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 3vw;
+	text-shadow: 0 0 white, 1px 1px white, 2px 2px white;
+	position: absolute;
+	visibility: hidden;
+	top: 38%;
+	left: 5%;
+}
+
+a:hover p {
+	visibility: visible;
+	animation: blink 0.5s infinite; 
+}
+
+#goback {
+	z-index: 500;
+	top: 20vh;
+	margin-left: 86vw;
+	position: fixed;
+	width: 100px;
+	text-align: center;
+}
+
+#goback img{
+	width: 5vw;	
+	animation: mover 1s ease-in-out infinite;
+	opacity: 0.3;
+}
+
+#goback img:hover{
+	width: 5vw;	
+	animation: mover 1s ease-in-out infinite;
+	opacity: 1;
+}
+
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2vh); }
+	  100% { transform: translateY(0); }
+}
+
+a h4 {
+	font-size: 1.5vw;
+	text-decoration: none;
+	margin: 0 auto;
+	color: #0000ff;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-top: -2vh;
+	visibility: hidden;
+
+}
+
+a:hover h4 {
+	font-size: 1.5vw;
+	text-decoration: none;
+	margin: 0 auto;
+	color: #0000ff;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-top: -2vh;
+	visibility: visible;
+}
+
+@keyframes blink {
+	0% {opacity:0;}
+	50%{opacity: 1;}
+	100%{opacity:0;}
+}
+
+#brace1 {
+	position: absolute;
+	margin-top: -73vh; 
+	margin-left: 3vw;
+	  animation: scale-up 10s both infinite;
+}
+
+#brace2 {
+	position: absolute;
+  margin-top: -5vh;
+	margin-left: 5vw;
+	  animation: scale-up 10s 11s both infinite;
+}
+
+#brace3 {
+	position: absolute;
+	margin-top: -63vh; 
+	margin-left: 70vw;
+	  animation: scale-up 10s 23s both infinite;
+}
+
+#brace4 {
+  position:absolute;
+	left: 75vw;
+	margin-top: -15vh;
+	  animation: scale-up 10s 24s both infinite;
+}
+
+.oprah img {
+	width: 15vw;
+	background-color: #0000ff;
+	border: solid 3px yellow;
+}
+
+#oprah1 {
+	position: absolute;
+	margin-top: -65vh; 
+	margin-left: 10vw;
+	  animation: scale-up 10s 1s both infinite;
+}
+
+#oprah2 {
+	position: absolute;
+	margin-top: -3vh; 
+	margin-left: 40vw;
+	  animation: scale-up 10s 13s both infinite;
+}
+
+#oprah3 {
+	position: absolute;
+	margin-top: -20vh; 
+	margin-left: 80vw;
+	  animation: scale-up 10s 22s both infinite;
+}
+
+#oprah4 {
+	position: absolute;
+	margin-top: -15vh; 
+	margin-left: 1vw;
+	  animation: scale-up 10s 25s both infinite;
+}
+
+
+.dodge img {
+	width: 10vw;
+	background-color: #0000ff;
+	border: solid 0.2vw yellow;
+}
+
+#dodge1 {
+	position: absolute;
+	margin-top: -65vh; 
+	margin-left: 45vw;
+	  animation: scale-up 10s 2s both infinite;
+}
+
+#dodge2 {
+	position: absolute;
+	margin-top: -10vh; 
+	margin-left: 34vw;
+	  animation: scale-up 10s 14s both infinite;
+}
+
+#dodge3 {
+	position: absolute;
+	margin-top: -70vh; 
+	margin-left: 82vw;
+	  animation: scale-up 10s 21s both infinite;
+}
+
+#dodge4 {
+	position: absolute;
+	margin-top: -42vh; 
+	margin-left: 5vw;
+	  animation: scale-up 10s 26s both infinite;
+}
+
+
+.disaster-girl img{
+	width: 10vw;
+	background-color: yellow;
+	border: solid 0.2vw #0000ff;
+}
+
+#disaster-girl1 {
+	position: absolute;
+	margin-top: -42vh; 
+	margin-left: 83vw;
+	  animation: scale-up 10s 3s both infinite;
+}
+
+#disaster-girl2 {
+	position: absolute;
+	margin-top: -75vh; 
+	margin-left: 38vw;
+	  animation: scale-up 10s 15s both infinite;
+}
+
+#disaster-girl3 {
+	position: absolute;
+	margin-top: -30vh; 
+	margin-left: 8vw;
+ animation: scale-up 10s 27s both infinite;
+}
+
+
+.sucessefulkid img {
+	width: 10vw;
+	background-color: yellow;
+	border: solid 0.2vw #0000ff;
+}
+
+#sucessefulkid1  {
+	position: absolute;
+  margin-top: -2vh;
+	margin-left: 28vw;
+  animation: scale-up 10s 4s both infinite;	
+}
+
+#sucessefulkid2  {
+	position: absolute;
+  margin-top: -55vh;
+	margin-left: 13vw;
+  animation: scale-up 10s 16s both infinite;	
+}
+
+#sucessefulkid3  {
+	position: absolute;
+  margin-top: -67vh;
+	margin-left: 63vw;
+  animation: scale-up 10s 19s both infinite;	
+}
+
+
+.wewant img {
+	width: 15vw;
+	background-color: #0000ff;
+	border: solid 0.2vw yellow;
+}
+
+#wewant1 {
+  position: absolute;
+  margin-top: -75vh;
+	margin-left: 50vw;
+	animation: scale-up 10s 5s both infinite;
+}
+
+#wewant2 {
+  position: absolute;
+  margin-top: -8vh;
+	margin-left: 8vw;
+	animation: scale-up 10s 17s both infinite;
+}
+
+#wewant3 {
+  position: absolute;
+  margin-top: -5vh;
+	margin-left: 82vw;
+	animation: scale-up 10s 18s both infinite;
+}
+
+#wewant4 {
+  position: absolute;
+  margin-top: -35vh;
+	margin-left: 73vw;
+  animation: scale-up 10s 28s both infinite;
+}
+
+@keyframes scale-up {
+	0% {
+		transform: scale(0);
+		transform-origin: 0% 0%;
+	}
+	5% {
+		transform:scale(1);
+		transform-origin: 0% 0%;
+	}
+	45% {
+		transform:scale(1);
+		transform-origin: 0% 0%;
+	}
+	50% {
+		transform:scale(0);
+		transform-origin: 0% 0%;
+	}
+	100%{transform:scale(0);
+		transform-origin: 0% 0%}	
+}
+
+.window {
+	position: absolute;
+	border: solid 0.2vw black;
+}	
+
+#sinopse{
+	background-color: white;
+	width: 45vw;	
+	margin-top: 5vh;
+	margin-left: 3vw;
+	position: fixed;
+	z-index: 1000;
+}
+
+.windowHeader {
+	height: 3.8vh;
+	border-bottom: solid 3px black;
+	text-align: center;
+	margin-top: 0;
+}
+
+.window-text {
+	overflow-y: auto;
+}
+
+
+#sinopse-text p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 400px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+
+p strong {
+	display:inline-block;
+	font-size: 2vh;
+	line-height: 2.5vh;
+ }
+
+.window-title {
+	float:left;
+	margin-left: 1vw;
+} 
+
+.window-title h3 {
+	margin: auto;
+	padding: 0.5vh 0vw;
+}
+
+.windowActions {
+	float: right;
+	position: relative;
+	padding: 0.5vh 0px;
+	height: 3vh;
+	width: 3.8vh;
+	border-left: solid 0.2vw black;
+}
+
+.windowActions img {
+	margin-top: 0.5vh;
+	width: 1.1vw;
+}
+
+/************************** SECÇÃO 2 *************************/
+
+#knowyourmemes {
+	width: 30vw;
+	height: 55vh;
+	float: right;
+	margin-right: 5vw;
+	margin-top: 3vh;
+}
+
+#knowyourmemes h1 {
+	font-weight: 900;
+   text-transform: uppercase;
+	font-size: 5vw;
+	line-height: 1.25em;
+	margin-top: 0;
+	color: #0000ff;
+	animation: limeanimation 5s infinite;
+}
+
+@keyframes limeanimation {
+	0%{}
+	30%{
+		text-shadow: 2px -2px lime, 4px -4px lime, 6px -6px lime, 8px -8px lime, 10px -10px lime, 12px -12px lime, 14px -14px lime, 16px -16px lime;
+	}
+		60%{
+		text-shadow: 2px -2px lime, 4px -4px lime, 6px -6px lime, 8px -8px lime, 10px -10px lime, 12px -12px lime, 14px -14px lime, 16px -16px lime;
+	}
+	90%{}	
+}
+
+#knowyourmemes1 {
+	background-color: white;
+	width: 30%;
+  margin-left: 5vw;
+  margin-top: 10vh;
+}
+
+#knowyourmemes1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 40vh;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.whatif {
+	margin-left: 17vw;
+	width: 40vw;
+	position: relative;
+	top: 23vh;
+}
+
+#whatif {
+	position: absolute;
+	border: solid 0.5vw lime;
+	width:40vw;
+}
+
+#whatif1 {
+	position: absolute;
+	border: solid 0.5vw lime;
+	width:40vw;
+}
+
+.reveal-container:hover #whatif1{
+	transform: translate(-1vw,-2vh);
+}
+
+.reveal-container:hover #whatif2{
+	transform: translate(-1vw,-2vh) translate(-1vw,-2vh);
+}
+
+.reveal {
+	transition: transform 0.25s 0.10s;
+}
+
+#whatif2 {
+	position: relative;
+		border: solid 0.5vw lime;
+		width:40vw;
+}
+
+#knowyourmemes2 {
+	background-color: white;
+	width: 40vw;
+  margin-left: 19vw;
+	margin-top: 15vh;
+}
+
+#knowyourmemes2 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 15vh;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.Onedoesnot {
+	width: 30vw;
+	position: relative;
+	margin-top: 15vh;
+	margin-left: 50vw;
+}
+
+#onedoesnot {
+	position: absolute;
+	width: 30vw;
+	border: solid 0.5vw lime;
+}
+
+#onedoesnot1 {
+	position:absolute;
+	width: 30vw;
+	border: solid 0.5vw lime;
+}
+
+#onedoesnot2 {
+	position: absolute;
+	width: 30vw;
+	border: solid 0.5vw lime;
+}
+
+.reveal-container:hover #onedoesnot1 {
+	transform: translate(1vw, 2vh);
+}
+
+.reveal-container:hover #onedoesnot2 {
+	transform: translate(2vw, 4vh);
+}
+
+#knowyourmemes3 {
+	background-color: white;
+	width: 20%;
+	margin-top: -40vh ;
+	margin-left: 40vw;
+}
+
+#knowyourmemes3 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 50vh;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#sources2{
+	margin-top: 50vh;
+	margin-left: 3vw;
+}
+
+/*section 3*/
+
+#ermahgerd {
+	width: 43vw;
+	height: 40vh;
+	
+}
+
+#ermahgerd h1 {
+	color: white;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 6vw;
+	margin-top:0;
+	padding-top: 2vh;
+	padding-left: 2vw; 
+	animation: orangeanimation 2s infinite;
+}
+
+@keyframes orangeanimation {
+	0%{opacity: 0;}
+	10%{
+		text-shadow: -1px -1px #ec6d1f, -2px -2px #ec6d1f, -3px -3px #ec6d1f, -4px -4px #ec6d1f, -5px -5px #ec6d1f;;
+    opacity: 1;	
+	}
+		80%{
+		text-shadow: -1px -1px #ec6d1f, -2px -2px #ec6d1f, -3px -3px #ec6d1f, -4px -4px #ec6d1f, -5px -5px #ec6d1f;;
+		opacity: 1;	
+	}
+	90%{opacity: 0;}	
+}
+
+#ermahgerd h2 {
+	color: #0000ff;
+	font-weight: 900;
+	text-transform: uppercase;
+  font-size: 5.7vw;
+	margin-top: -8vh;
+	padding-left: 2vw;
+	animation: orangeanimation2 5s infinite;
+}
+
+@keyframes orangeanimation2 {
+	0%{}
+	30%{
+			text-shadow: -1px -1px #ec6d1f, -2px -2px #ec6d1f, -3px -3px #ec6d1f, -4px -4px #ec6d1f, -5px -5px #ec6d1f, -6px -6px #ec6d1f, -7px -7px #ec6d1f, -8px -8px #ec6d1f, -9px -9px #ec6d1f, -10px -10px #ec6d1f, -11px -11px #ec6d1f, -12px -12px #ec6d1f, -13px -13px #ec6d1f;	
+	}
+	60%{
+			text-shadow: -1px -1px #ec6d1f, -2px -2px #ec6d1f, -3px -3px #ec6d1f, -4px -4px #ec6d1f, -5px -5px #ec6d1f, -6px -6px #ec6d1f, -7px -7px #ec6d1f, -8px -8px #ec6d1f, -9px -9px #ec6d1f, -10px -10px #ec6d1f, -11px -11px #ec6d1f, -12px -12px #ec6d1f, -13px -13px #ec6d1f;	
+	}
+	90%{}	
+}
+
+
+#ermahgerd1 {
+	background-color: white;
+	width: 20%;
+  margin-left: 33vw;
+  margin-top: -18vh ;
+}
+
+#ermahgerd1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 25vh;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#ermahgerd2 {
+	background-color: white;
+	width: 45%;
+	margin-left: 40vw;
+	margin-top: 30vh ;
+}
+
+#ermahgerd2 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 115px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+
+.lookatall {
+	width: 50vw;
+	position: relative;
+	margin-left: 25vw;
+	margin-top: -9vh;
+}
+
+#lookatall {
+	position: absolute;
+	width: 50vw;
+	border: solid 10px #ec6d1f;
+}
+
+#lookatall1 {
+	position:absolute;
+	width: 50vw;
+	border: solid 10px #ec6d1f;
+}
+
+#lookatall2 {
+	position: absolute;
+	width: 50vw;
+	border: solid 10px #ec6d1f;
+}
+
+.reveal-container:hover #lookatall1 {
+	transform: scale(1.1);
+}
+
+.reveal-container:hover #lookatall {
+	transform: scale(1.2);
+}
+
+
+#ermahgerd3 {
+	background-color: white;
+	width: 30%;
+	margin-left: 3vw;
+  margin-top: 12vh ;
+}
+
+#ermahgerd3 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 300px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#ermahgerd4 {
+	background-color: white;
+	width: 27%;
+	margin-left: 65vw;
+	margin-top: -20vh;
+}
+
+#ermahgerd4 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 200px;
+	margin-top: 0;
+	padding: 0.5em;	
+	padding-top: 0;
+}
+
+#ermahgerd4 h2 {
+	font-size: 3.7vh;
+	margin-top: 0;
+	padding-left: 0.5em;	
+	padding-top: 0.5em;
+}
+
+.ermahgerdmeme  {
+	float: right;
+	margin-right: 25vw;
+	margin-top: 20vh;
+	position: relative;
+}
+
+
+#ermahgerdmeme{
+	position: absolute;
+	background-color: #ec6d1f;
+	border: solid 10px #0000ff;
+}
+
+#ermahgerdmeme1 {
+	position: absolute;
+	background-color: #ec6d1f;
+	border: solid 10px #0000ff;
+}
+
+.reveal-container:hover #ermahgerdmeme1{
+	transform: translate(1vw,-2vh);
+}
+
+.reveal-container:hover #ermahgerdmeme2{
+	transform: translate(1vw,-2vh) translate(1vw,-2vh);
+}
+
+#ermahgerdmeme2 {
+	position: absolute;
+	background-color: #ec6d1f;
+	border: solid 10px #0000ff;
+}
+
+#source3 {
+  margin-top: 65vh;
+	margin-left: 3vw;
+}
+
+#lol {
+	height: 30vh;
+	width: 40vw;
+	float: right;
+	margin-right: 3vw ;
+	margin-top: 70vh;
+}
+
+#lol h1 {
+	color: #0DDFFF;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 6vw;
+	margin-top:0;
+	padding-top: 2vh;
+	text-align: center;
+	animation: blueanimation 4s ease-in-out infinite;
+}
+
+#lol h2 {
+	color: #0DDFFF;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 6vw;
+	margin-top:0;
+	padding-top: 2vh;
+	margin-top: -9vh;
+	text-align: center;	
+	animation: blueanimation 4s ease-in-out infinite; 
+  
+}
+
+@keyframes blueanimation {
+	0% {}
+	30% {text-shadow: 0px 1px #0000ff, 0px 2px #0000ff, 0px 5px #0000ff, 0px 8px #0000ff, 0px 12px #0000ff, 0px 16px #0000ff, 0px 20px #0000ff ;
+	}
+	60% {text-shadow: 0px 1px #0000ff, 0px 2px #0000ff, 0px 5px #0000ff, 0px 8px #0000ff, 0px 12px #0000ff, 0px 16px #0000ff, 0px 20px #0000ff ;
+	}
+	100%{}
+}
+
+#lol1 {
+	background-color: white;
+	width: 30vw;
+	margin-left: 50vw;
+	margin-top: 20vh;
+}
+
+#lol1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 300px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.persianCat {
+	width: 30vw;
+	float: right;
+	margin-right: -34vw;
+	top: 15vh;
+}
+
+#persianCat {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0DDFFF;
+}
+
+#persianCat1 {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0DDFFF;
+}
+
+#persianCat2 {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0DDFFF;
+}
+
+.reveal-container:hover #persianCat1{
+	transform: translate(1vw,-2vh);
+}
+
+.reveal-container:hover #persianCat2{
+	transform: translate(1vw,-2vh) translate(1vw,-2vh); 
+}
+
+#lol2 {
+	background-color: white;
+	width: 41vw;
+	margin-top: 8vh;
+	left: 40vw;
+}
+
+#lol2 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 10px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#lol3 {
+	background-color: white;
+	width: 28vw;
+	left: 27vw;
+	margin-top: 50vh;
+}
+
+#lol3 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 173px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.grumpyCat {
+	position:relative;
+	width: 30vw;
+	left: 5vw;
+	top: 35vh;
+}
+
+#grumpyCat {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0000ff;
+}
+
+#grumpyCat1 {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0000ff;
+}
+
+#grumpyCat2 {
+	position: absolute;
+	width: 30vw;
+	border: solid 10px #0000ff;
+}
+
+.reveal-container:hover #grumpyCat1{
+	transform: translate(-1vw,-2vh);
+}
+
+.reveal-container:hover #grumpyCat2{
+	transform: translate(-1vw,-2vh) translate(-1vw,-2vh); 
+}
+
+
+#lol4 {
+	background-color: white;
+	width: 28vw;
+  margin-top: 5vh;
+	left: 20vw;  
+}
+
+#lol4 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 300px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#source4{
+	position:absolute;
+	margin-top: 96vh;
+	margin-left: 3vw;
+}
+
+/* SECTION 5 */
+
+#politicalparticipation {
+	width: 50vw;
+	height: 75vh;
+  position: absolute;
+	margin-top: 3vh;
+}
+
+#politicalparticipation h1 {
+	color: #0000ff;
+	font-size: 5.5vw;
+	font-weight: 900;
+	line-height: 1.3em ;
+	text-transform: uppercase;
+	margin-left: 4vw;
+	animation: animationalt 4s ease-in-out infinite;
+	
+}
+
+@keyframes animationalt {
+	0% {}
+	35%{text-shadow: -1px -1px #f10655,  -2px -2px #f10655,  -3px -3px #f10655,  -4px -4px #f10655,  -5px -5px #f10655;
+	}
+	50% {}
+	75%{text-shadow: 1px 1px #0000ff,  2px 2px #0000ff,  3px 3px #0000ff,  4px 4px #0000ff,  5px 5px #0000ff;
+	}
+	100%{}
+}
+
+#politicalanimation {
+	margin-top: -4vh;
+	margin-left: 4vw;
+	width: 20vw;
+	height: 20vw;
+}
+
+
+#politicalanimation h2 {
+	color: #f10655;
+	font-weight: 900;
+	font-size: 4vw;
+	text-transform: uppercase;
+	text-align:center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#politicalanimation h2::before,
+#politicalanimation h2::after {
+  content: "Ain't nobody got time for that";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: rotateY(0.5deg);
+  transform-origin: 0 50%;
+}
+#politicalanimation h2::after {
+  transform: rotateY(-0.5deg);
+  transform-origin: 100% 50%;
+}
+@keyframes spin {
+  from { transform: rotateY(0deg)}
+  to { transform: rotateY(-360deg)}
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 #0000ff; }
+  25% { text-shadow: 1px 0 #0000ff, 2px 0 #0000ff, 3px 0 #0000ff, 4px 0#0000ff, 5px 0 #0000ff, 6px 0 #0000ff; }
+  50% { text-shadow: 0 0 #0000ff;}
+  75% { text-shadow: -1px 0 #0000ff, -2px 0 #0000ff, -3px 0 #0000ff, -4px 0 #0000ff, -5px 0 #0000ff, -6px 0 #0000ff;}
+  100% { text-shadow: 0 0 #0000ff;}
+}
+
+#politicalparticipation img {
+	margin-top: -37vh;
+	margin-right: 5vw;
+	float: right;
+	width: 18vw;	
+	transition: 1s;
+}
+
+#politicalparticipation img:hover {
+	margin-top: -37vh;
+	margin-right: 5vw;
+	float: right;
+	width: 18vw;
+	transform: rotate(360deg);
+}
+
+#politcalparticipation1 {
+	background-color: white;
+	width: 25vw;
+	margin-left: 68vw;
+	margin-top: 8vh;
+}
+
+#politcalparticipation1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 200px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.idontalways {
+	position:relative;
+	height: 55vh;
+	width: 20vw;
+	top: 15vh;
+	float: right;
+	margin-right: 15vw;
+}
+
+#idontalways {
+	position: relative;
+	height: 55vh;
+	border: solid 10px  #f10655;
+}
+
+#idontalways1 {
+	position:absolute;
+	height: 55vh;
+	border: solid 10px  #f10655;
+}
+
+#idontalways2 {
+	position: absolute;
+	height: 55vh;
+	border: solid 10px  #f10655;
+}
+
+.reveal-container:hover #idontalways1 {
+	transform: translate(1vw, 2vh);
+}
+
+.reveal-container:hover #idontalways2 {
+	transform: translate(2vw, 4vh);
+}
+
+#politcalparticipation2 {
+	background-color: white;
+	width: 30vw;
+	margin-top: 40vh;
+	margin-left: 55vw;
+}
+
+#politcalparticipation2 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 60px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#politcalparticipation3 {
+	background-color: white;
+	width: 40vw;
+	margin-top: 75vh;
+	margin-left:48vw;
+
+}
+
+#politcalparticipation3 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 68px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.traditionalmeme {
+	margin-left: 50vw;
+	width: 30vw;
+	position: relative;
+	top: 40vh;	
+}
+
+#traditionalmeme {
+	width: 30vw;
+	position: absolute;
+	border: solid 10px #0000ff;
+}
+
+#traditionalmeme1 {
+	width: 30vw;
+	position: absolute;
+		border: solid 10px #0000ff;
+}
+
+.reveal-container:hover #traditionalmeme1{
+	transform: translate(-1vw,-2vh);
+}
+
+.reveal-container:hover #traditionalmeme{
+	transform: translate(-1vw,-2vh) translate(-1vw,-2vh); 
+}
+
+#traditionalmeme2 {
+	width: 30vw;
+	position: absolute;
+	border: solid 10px #0000ff;
+}
+
+#source5{
+  margin-top: 95vh;
+	margin-left: 3vw;
+	position: absolute;
+}
+/* SECTION 6*/
+
+#framenarrative {
+	width: 40vw;
+	height: 50vh;
+	float:right;
+	margin-right: 5vw;
+	margin-top: 3vh;
+}
+
+#framenarrative h1 {
+	text-transform:uppercase;
+	font-weight: 900;
+	font-size: 6vw;
+	line-height: 1.2em;
+	color: #ff00ff;
+	margin-top: 0;
+	text-align: right;
+	animation: pinkanimation 5s infinite;	
+}
+
+@keyframes pinkanimation {
+	0%{color: #ff00ff;}
+	50%{
+		color: #0000ff;
+		text-shadow: -3px -2px #ff00ff, -6px -4px #ff00ff, -9px -6px #ff00ff, -12px -8px #ff00ff, -15px -10px #ff00ff, -18px -12px #ff00ff, -21px -14px #ff00ff;
+	}
+	100% {color: #ff00ff;}
+}
+
+.tellmemore {
+	width: 35vw;
+	position: relative;
+	top: 55vh;
+	margin-left: 58vw;
+}
+
+#tellmemore {
+	position: absolute;
+	width: 35vw;
+	border: solid 10px #0000ff;
+}
+
+#tellmemore1 {
+	position:absolute;
+	width: 35vw;
+	border: solid 10px #0000ff;
+}
+
+#tellmemore2 {
+	position: absolute;
+	width: 35vw;
+	border: solid 10px #0000ff;
+}
+
+.reveal-container:hover #tellmemore1 {
+	transform: translate(1vw, 2vh);
+}
+
+.reveal-container:hover #tellmemore2 {
+	transform: translate(2vw, 4vh);
+}
+
+
+#framenarrative1 {
+	background-color: white;
+	width: 30vw;
+	margin-top: 10vh;
+	margin-left:40vw;
+
+}
+
+#framenarrative1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 60px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#F {
+	background-color: white;
+	width: 30vw;
+	margin-top: 15vh;
+	margin-left: 3vw;
+}
+
+#F p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 90px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+
+#R {
+	background-color: white;
+	width: 40vw;
+	margin-top: 30vh;
+	margin-left: 10vw;
+}
+
+#R p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 82px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#A {
+	background-color: white;
+	width: 25vw;
+	margin-top: 55vh;
+	margin-left:15vw;
+}
+
+#A p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 150px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#M {
+	background-color: white;
+	width: 20vw;
+	margin-top: 38vh;
+	margin-left:33vw;
+}
+
+#M p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 300px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#E {
+	background-color: white;
+	width: 50vw;
+	margin-top: 80vh;
+	margin-left: 7vw;
+}
+
+#E p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 30px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#source6{
+  margin-top: 100vh;
+	margin-left: 3vw;
+	position: absolute;
+}
+
+/* SECTION 7*/
+
+#movementmemes {
+	position: relative;
+	width: 50vw;
+	height: 38vh;
+	top: 5vh;
+	left: 24vw;
+}
+
+#movementmemes h1 {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 5vw;
+	text-align: center;
+	color: #0000FF;
+	text-shadow: 1px -1px black, 2px -2px black, 3px -3px black, 4px -4px black, 5px -5px black, 6px -6px black, 7px -7px black, 8px -8px black, 9px -9px black, 10px -10px black, 11px -11px black, 12px -12px black, 13px -13px black;
+	animation: blueanimation 8s ease-in-out infinite;
+}
+
+@keyframes blueanimation {
+	0%{color: #0000ff;}
+	50%{
+		color: white;
+		text-shadow: 3px 2px #0000ff, 6px 4px #0000ff, 9px 6px #0000ff, 12px 8px #0000ff, 15px 10px #0000ff, 18px 12px #0000ff, 21px 14px #0000ff;
+	}
+	100% {color: #0000ff;}
+}
+
+
+#movementmemes h2 {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 4vw;
+	text-align: center;
+	color: #0000ff;
+	margin-top: -4vh;
+	animation: outline 8s 5s ease-in-out infinite;
+}
+
+@keyframes outline {
+	0%{}
+	50% {
+		text-shadow: 1px -1px white, 2px -2px black, 3px -3px white, 4px -4px black, 5px -5px white, 6px -6px black, 7px -7px white, 8px -8px black, 9px -9px white;
+	}
+	100%{}
+}
+
+#movementmemes1 {
+	background-color: white;
+	width: 21vw;
+	margin-top: -35vh;
+	left: 3vw;
+}
+
+#movementmemes1 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 300px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.drake {
+	margin-left: 10vw;
+	height: 30vh;
+	width: 30vw;
+	margin-top: 3vh;
+	position: relative;
+}
+
+#drakememe2 {
+	position: absolute;
+	height: 50vh;
+	border: solid 5px black;
+}
+
+#drakememe1 {
+	position: absolute;
+	height: 50vh;
+	border: solid 5px black;
+}
+
+.reveal-container:hover #drakememe1{
+	transform: translate(-1vw,-2vh);
+}
+
+.reveal-container:hover #drakememe{
+	transform: translate(-1vw,-2vh) translate(-1vw,-2vh);
+}
+
+
+#drakememe {
+	position: absolute;
+	height: 50vh;
+		border: solid 5px black;
+}
+
+
+#movementmemes2 {
+	background-color: white;
+	width: 50vw;
+	left: 35vw;
+}
+
+#movementmemes2 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 100px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+.wewantmeme {
+	width: 25vw;
+	position: absolute;
+  margin-top: -30vh;
+	margin-left: 70vw;
+}
+
+#wewantmeme {
+	position: relative;
+	width: 25vw;
+	border: solid 5px black;
+}
+
+#wewantmeme1 {
+	position:absolute;
+	width: 25vw;
+	border: solid 5px black;
+}
+
+#wewantmeme2 {
+	position: absolute;
+	width: 25vw;
+	border: solid 5px black;
+}
+
+.reveal-container:hover #wewantmeme1 {
+	transform: translate(1vw, 2vh);
+}
+
+.reveal-container:hover #wewantmeme2 {
+	transform: translate(2vw, 4vh);
+}
+
+
+#movementmemes3 {
+	background-color: white;
+	width: 30vw;
+	margin-top: -20vh;
+	margin-left: 45vw;
+}
+
+#movementmemes3 p {
+	font-size: 2.8vh;
+	line-height: 1.3em;
+	height: 200px;
+	margin-top: 0;
+	padding: 0.5em;	
+}
+
+#source7{
+	margin-top: 25vh;
+	margin-left: 3vw;
+	position: absolute;
+}
